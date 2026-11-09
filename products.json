@@ -1,0 +1,134 @@
+[
+  {
+    "no": 1,
+    "name": "Microsoft Visual C++ 2013 Redistributable (x86)"
+  },
+  {
+    "no": 2,
+    "name": "Microsoft Visual C++ 2013 Redistributable (x64)"
+  },
+  {
+    "no": 3,
+    "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86)"
+  },
+  {
+    "no": 4,
+    "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64)"
+  },
+  {
+    "no": 5,
+    "name": "Microsoft Analysis Services OLE DB プロバイダー"
+  },
+  {
+    "no": 6,
+    "name": "Microsoft ODBC Driver 17 for SQL Server【17系列限定】"
+  },
+  {
+    "no": 7,
+    "name": "Microsoft OLE DB Driver for SQL Server【18系列限定】"
+  },
+  {
+    "no": 8,
+    "name": "Microsoft SQL Server Management Studio【20系列限定】"
+  },
+  {
+    "no": 9,
+    "name": "Microsoft Visual Studio Tools for Applications 2019"
+  },
+  {
+    "no": 10,
+    "name": "Amazon EC2Launch v2"
+  },
+  {
+    "no": 11,
+    "name": "Amazon SSM Agent"
+  },
+  {
+    "no": 12,
+    "name": "AWS Command Line Interface v2"
+  },
+  {
+    "no": 13,
+    "name": "AWS PV Drivers"
+  },
+  {
+    "no": 14,
+    "name": "aws-cfn-bootstrap"
+  },
+  {
+    "no": 15,
+    "name": "CSLGuard Solutions 5.90 Agent"
+  },
+  {
+    "no": 16,
+    "name": "Extensible SNMP Agent"
+  },
+  {
+    "no": 17,
+    "name": "Tera Term"
+  },
+  {
+    "no": 18,
+    "name": "Microsoft .NET 8.0.7 - Windows Server Hosting【8系列限定】"
+  },
+  {
+    "no": 19,
+    "name": "Microsoft .NET Runtime - (x86)【8系列限定】"
+  },
+  {
+    "no": 20,
+    "name": "Microsoft .NET Runtime - (x64)【8系列限定】"
+  },
+  {
+    "no": 21,
+    "name": "Microsoft ASP.NET Core Shared Framework - (x86)【8系列限定】"
+  },
+  {
+    "no": 22,
+    "name": "Microsoft ASP.NET Core Shared Framework - (x64)【8系列限定】"
+  },
+  {
+    "no": 23,
+    "name": "Microsoft ASP.NET Core Hosting Bundle Options【.NET 8対応】"
+  },
+  {
+    "no": 24,
+    "name": "Microsoft ASP.NET Core Module V2【.NET 8対応】"
+  },
+  {
+    "no": 25,
+    "name": "Canon Generic Plus LIPSLX Printer Driver Uninstaller"
+  },
+  {
+    "no": 26,
+    "name": "Windows Server 2022【最新累積更新KB・OSビルド】"
+  },
+  {
+    "no": 27,
+    "name": "Office LTSC 2024【バージョン・ビルド】"
+  },
+  {
+    "no": 28,
+    "name": "Microsoft Edge【Stableチャネル限定】"
+  },
+  {
+    "no": 29,
+    "name": "SQL Server 2022 CU【最新CU番号・単体CUのKB・ビルド】"
+  },
+  {
+    "no": 30,
+    "name": "SQL Server 2022 CU＋GDR【最新CU系統に対応するセキュリティ更新KB・ビルド】"
+  },
+  {
+    "no": 31,
+    "name": "SQL Server 2022 GDR【CU系統と区別したGDR向けKB・ビルド】"
+  },
+  {
+    "no": 32,
+    "name": "Microsoft JDBC Driver for SQL Server"
+  },
+  {
+    "no": 33,
+    "name": ".NET Framework 3.5および4.8の累積的な更新プログラム【Windows Server 2022向けKB】"
+  }
+]

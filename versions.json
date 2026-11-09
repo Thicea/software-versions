@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-11-09T18:56:32+09:00",
+  "items": [
+    {
+      "no": 1,
+      "name": "Microsoft Visual C++ 2013 Redistributable (x86)",
+      "version": "12.0.40664.0",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft公式ドキュメント",
+          "url": "https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs/windows/latest-supported-vc-redist.md"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "name": "Microsoft Visual C++ 2013 Redistributable (x64)",
+      "version": "12.0.40664.0",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft公式ドキュメント",
+          "url": "https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs/windows/latest-supported-vc-redist.md"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86)",
+      "version": "最新版未確定（公式インストーラーの詳細ファイルバージョンを取得できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft公式ドキュメント",
+          "url": "https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs/windows/latest-supported-vc-redist.md"
+        },
+        {
+          "label": "公式インストーラー（今回取得不可）",
+          "url": "https://aka.ms/vc14/vc_redist.x86.exe"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64)",
+      "version": "最新版未確定（公式インストーラーの詳細ファイルバージョンを取得できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft公式ドキュメント",
+          "url": "https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs/windows/latest-supported-vc-redist.md"
+        },
+        {
+          "label": "公式インストーラー（今回取得不可）",
+          "url": "https://aka.ms/vc14/vc_redist.x64.exe"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "name": "Microsoft Analysis Services OLE DB プロバイダー",
+      "version": "今回未確認（公式ページへのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://learn.microsoft.com/en-us/analysis-services/client-libraries"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "name": "Microsoft ODBC Driver 17 for SQL Server【17系列限定】",
+      "version": "17.11.1.1",
+      "releaseDate": "2026/04/30",
+      "sources": [
+        {
+          "label": "Microsoft公式リリースノート",
+          "url": "https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/connect/odbc/windows/release-notes-odbc-sql-server-windows.md#1711"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "name": "Microsoft OLE DB Driver for SQL Server【18系列限定】",
+      "version": "18.7.6",
+      "releaseDate": "2026/10/09",
+      "sources": [
+        {
+          "label": "Microsoft公式リリースノート",
+          "url": "https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/connect/oledb/release-notes-for-oledb-driver-for-sql-server.md#1876"
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "name": "Microsoft SQL Server Management Studio【20系列限定】",
+      "version": "今回未確認（20系列の公式ページへのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://learn.microsoft.com/en-us/ssms/release-notes-20"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "name": "Microsoft Visual Studio Tools for Applications 2019",
+      "version": "今回未確認（2019系列の詳細ビルドを取得できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://www.microsoft.com/ja-jp/download/details.aspx?id=58317"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "name": "Amazon EC2Launch v2",
+      "version": "今回未確認（v2系列の公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "AWS更新履歴（今回取得不可）",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "name": "Amazon SSM Agent",
+      "version": "3.3.5708.0",
+      "releaseDate": "2026/11/02",
+      "sources": [
+        {
+          "label": "AWS公式GitHubリリース",
+          "url": "https://github.com/aws/amazon-ssm-agent/releases/tag/3.3.5708.0"
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "name": "AWS Command Line Interface v2",
+      "version": "2.39.6（正式タグ・変更履歴確認。Windows用配布状況は今回未確認）",
+      "releaseDate": "2026/11/06",
+      "sources": [
+        {
+          "label": "AWS公式リリースタグ",
+          "url": "https://github.com/aws/aws-cli/releases/tag/2.39.6"
+        },
+        {
+          "label": "AWS公式変更履歴",
+          "url": "https://github.com/aws/aws-cli/blob/2.39.6/CHANGELOG.rst"
+        },
+        {
+          "label": "Windows配布案内（今回取得不可）",
+          "url": "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "name": "AWS PV Drivers",
+      "version": "今回未確認（最新の公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "name": "aws-cfn-bootstrap",
+      "version": "今回未確認（日本語・グローバル英語・中国向け英語の掲載値を取得できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "日本語（今回取得不可）",
+          "url": "https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html"
+        },
+        {
+          "label": "グローバル英語（今回取得不可）",
+          "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html"
+        },
+        {
+          "label": "中国向け英語（今回取得不可）",
+          "url": "https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html"
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "name": "CSLGuard Solutions 5.90 Agent",
+      "version": "最新版未確定（Agent単体の公式公開値を確認できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "製品確認先（今回取得不可）",
+          "url": "https://www.ntt-tx.co.jp/whatsnew/2022/221209.html"
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "name": "Extensible SNMP Agent",
+      "version": "最新版未確定（製造元・製品系列未特定）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "候補資料・同一製品か未確認（今回取得不可）",
+          "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2024-127/"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "name": "Tera Term",
+      "version": "5.7.1",
+      "releaseDate": "2026/10/09",
+      "sources": [
+        {
+          "label": "公式GitHubリリース",
+          "url": "https://github.com/TeraTermProject/teraterm/releases/tag/v5.7.1"
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "name": "Microsoft .NET 8.0.7 - Windows Server Hosting【8系列限定】",
+      "version": "Hosting Bundle 8.0.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "name": "Microsoft .NET Runtime - (x86)【8系列限定】",
+      "version": "8.0.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "name": "Microsoft .NET Runtime - (x64)【8系列限定】",
+      "version": "8.0.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 21,
+      "name": "Microsoft ASP.NET Core Shared Framework - (x86)【8系列限定】",
+      "version": "8.0.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 22,
+      "name": "Microsoft ASP.NET Core Shared Framework - (x64)【8系列限定】",
+      "version": "8.0.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "name": "Microsoft ASP.NET Core Hosting Bundle Options【.NET 8対応】",
+      "version": "最新版未確定（Options単体の公開バージョンを確認できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft公式Hosting Bundle解説",
+          "url": "https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/host-and-deploy/iis/hosting-bundle.md"
+        }
+      ]
+    },
+    {
+      "no": 24,
+      "name": "Microsoft ASP.NET Core Module V2【.NET 8対応】",
+      "version": "18.0.26296.33",
+      "releaseDate": "2026/10/25",
+      "sources": [
+        {
+          "label": "Microsoft公式.NET 8配布メタデータ",
+          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
+        }
+      ]
+    },
+    {
+      "no": 25,
+      "name": "Canon Generic Plus LIPSLX Printer Driver Uninstaller",
+      "version": "最新版未確定（アンインストーラー単体の公式公開値を確認できず）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Canonアンインストール手順（今回取得不可）",
+          "url": "https://oip.manual.canon/USRMA-3660-zz-DR-enUV/contents/dwu-inst-updt_uninst-uninst.html"
+        }
+      ]
+    },
+    {
+      "no": 26,
+      "name": "Windows Server 2022【最新累積更新KB・OSビルド】",
+      "version": "今回未確認（公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://support.microsoft.com/en-us/topic/windows-server-2022-update-history-e1caa597-2bc6-41e8-b5b3-25f1659e5a2d"
+        }
+      ]
+    },
+    {
+      "no": 27,
+      "name": "Office LTSC 2024【バージョン・ビルド】",
+      "version": "今回未確認（公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-2024"
+        }
+      ]
+    },
+    {
+      "no": 28,
+      "name": "Microsoft Edge【Stableチャネル限定】",
+      "version": "今回未確認（公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "公式参照先（今回未確認）",
+          "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel"
+        }
+      ]
+    },
+    {
+      "no": 29,
+      "name": "SQL Server 2022 CU【最新CU番号・単体CUのKB・ビルド】",
+      "version": "今回未確認（CU・CU＋GDR・GDRの公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft更新履歴（今回取得不可）",
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates"
+        }
+      ]
+    },
+    {
+      "no": 30,
+      "name": "SQL Server 2022 CU＋GDR【最新CU系統に対応するセキュリティ更新KB・ビルド】",
+      "version": "今回未確認（CU・CU＋GDR・GDRの公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft更新履歴（今回取得不可）",
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates"
+        }
+      ]
+    },
+    {
+      "no": 31,
+      "name": "SQL Server 2022 GDR【CU系統と区別したGDR向けKB・ビルド】",
+      "version": "今回未確認（CU・CU＋GDR・GDRの公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft更新履歴（今回取得不可）",
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates"
+        }
+      ]
+    },
+    {
+      "no": 32,
+      "name": "Microsoft JDBC Driver for SQL Server",
+      "version": "13.6.2（正式版。公式リリースノートは13.6.0／2026/09/10の掲載）",
+      "releaseDate": "2026/11/02",
+      "sources": [
+        {
+          "label": "Microsoft公式GitHubリリース（13.6.2）",
+          "url": "https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2"
+        },
+        {
+          "label": "Microsoft公式リリースノート（13.6.0）",
+          "url": "https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/connect/jdbc/release-notes-for-the-jdbc-driver.md#136"
+        }
+      ]
+    },
+    {
+      "no": 33,
+      "name": ".NET Framework 3.5および4.8の累積的な更新プログラム【Windows Server 2022向けKB】",
+      "version": "今回未確認（Server 2022向け3.5／4.8の公式更新履歴へのアクセス拒否）",
+      "releaseDate": "未確認",
+      "sources": [
+        {
+          "label": "Microsoft更新履歴（今回取得不可）",
+          "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5127687"
+        }
+      ]
+    }
+  ]
+}

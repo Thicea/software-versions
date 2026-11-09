@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ソフトウェア最新バージョン一覧</title>
+<style>
+body{font-family:system-ui,"Meiryo",sans-serif;margin:16px;color:#222;font-size:14px}
+h1{font-size:20px;margin:0 0 6px}
+p{margin:0 0 16px;color:#555}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px;table-layout:fixed}
+col.no{width:52px}
+col.date{width:150px}
+col.url{width:145px}
+th,td{border:1px solid #ccc;padding:8px;text-align:left;vertical-align:top}
+th{background:#f2f2f2;white-space:nowrap}
+th,td{overflow-wrap:anywhere}
+td:first-child{width:38px;text-align:center}
+td:nth-child(4){white-space:normal;overflow-wrap:anywhere}
+.section td{background:#eaeaea;font-weight:bold;text-align:left!important}
+a{color:#0758aa}
+a+a::before{content:" / ";color:#777}
+</style>
+</head>
+<body>
+<h1>ソフトウェア最新バージョン一覧</h1>
+<p>調査基準日時：{{CHECKED_AT}}　｜　Windows Server 2022関連（33項目）</p>
+<div class="table-wrap"><table>
+<colgroup><col class="no"><col><col><col class="date"><col class="url"></colgroup>
+<thead><tr><th scope="col">No.</th><th scope="col">製品名</th><th scope="col">最新バージョン・KB</th><th scope="col">公開日</th><th scope="col">公式URL</th></tr></thead>
+<tbody>
+{{ROWS}}
+</tbody></table></div>
+</body>
+</html>
