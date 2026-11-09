@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T20:21:01+09:00",
+  "checkedAt": "2026-11-09T22:04:13+09:00",
   "items": [
     {
       "no": 1,
@@ -380,8 +380,8 @@
     {
       "no": 27,
       "name": "Office LTSC 2024【バージョン・ビルド】",
-      "version": "バージョン 2408（ビルド 17932.21056）",
-      "releaseDate": "2026/10/13",
+      "version": "バージョン 2610（ビルド 20527.20150）",
+      "releaseDate": "2026/11/04",
       "sources": [
         {
           "label": "Microsoft公式Office LTSC 2024更新履歴",
