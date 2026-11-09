@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ソフトウェア最新バージョン一覧</title>
+<style>
+body{font-family:system-ui,"Meiryo",sans-serif;margin:16px;color:#222;font-size:14px}
+h1{font-size:20px;margin:0 0 6px}
+p{margin:0 0 16px;color:#555}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px;table-layout:fixed}
+col.no{width:52px}
+col.date{width:150px}
+col.url{width:145px}
+th,td{border:1px solid #ccc;padding:8px;text-align:left;vertical-align:top}
+th{background:#f2f2f2;white-space:nowrap}
+th,td{overflow-wrap:anywhere}
+td:first-child{width:38px;text-align:center}
+td:nth-child(4){white-space:normal;overflow-wrap:anywhere}
+.section td{background:#eaeaea;font-weight:bold;text-align:left!important}
+a{color:#0758aa}
+a+a::before{content:" / ";color:#777}
+</style>
+</head>
+<body>
+<h1>ソフトウェア最新バージョン一覧</h1>
+<p>調査基準日：2026/11/09　｜　Windows Server 2022関連（33項目）</p>
+<div class="table-wrap"><table>
+<colgroup><col class="no"><col><col><col class="date"><col class="url"></colgroup>
+<thead><tr><th>No.</th><th>製品名</th><th>最新バージョン・KB</th><th>公開日</th><th>公式URL</th></tr></thead>
+<tbody>
+<tr class="section"><td colspan="5">■ バンドルソフト（25項目）</td></tr>
+<tr><td>1</td><td>Microsoft Visual C++ 2013 Redistributable (x86)</td><td>12.0.40664.0</td><td>未確認</td><td><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>2</td><td>Microsoft Visual C++ 2013 Redistributable (x64)</td><td>12.0.40664.0</td><td>未確認</td><td><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>3</td><td>Microsoft Visual C++ 2015-2022 Redistributable (x86)</td><td>最新版未確定（過去参考：14.51.36247.0）</td><td>未確認</td><td><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>4</td><td>Microsoft Visual C++ 2015-2022 Redistributable (x64)</td><td>最新版未確定（過去参考：14.51.36247.0）</td><td>未確認</td><td><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>5</td><td>Microsoft Analysis Services OLE DB プロバイダー</td><td>MSOLAP 17.0.96.20</td><td>未確認</td><td><a href="https://learn.microsoft.com/en-us/analysis-services/client-libraries?view=asallproducts-allversions" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>6</td><td>Microsoft ODBC Driver 17 for SQL Server</td><td>17.11.1.1</td><td>2026/04/30</td><td><a href="https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>7</td><td>Microsoft OLE DB Driver for SQL Server（18系列）</td><td>18.7.6</td><td>2026/10/09</td><td><a href="https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>8</td><td>Microsoft SQL Server Management Studio（20系列）</td><td>20.2.1（ビルド 20.2.37.0）</td><td>2025/04/08</td><td><a href="https://learn.microsoft.com/en-us/ssms/release-notes-20" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>9</td><td>Microsoft Visual Studio Tools for Applications 2019</td><td>最新版未確定（公式表記：16.0／過去参考：16.0.35907）</td><td>未確認</td><td><a href="https://www.microsoft.com/ja-jp/download/details.aspx?id=58317" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>10</td><td>Amazon EC2Launch v2</td><td>2.5.2</td><td>2026/08/05</td><td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html" target="_blank" rel="noopener noreferrer">AWS</a></td></tr>
+<tr><td>11</td><td>Amazon SSM Agent</td><td>3.3.5708.0</td><td>2026/11/02</td><td><a href="https://github.com/aws/amazon-ssm-agent/releases/tag/3.3.5708.0" target="_blank" rel="noopener noreferrer">AWS公式GitHub</a></td></tr>
+<tr><td>12</td><td>AWS Command Line Interface v2</td><td>2.39.6（公式タグ・変更履歴で確認）</td><td>2026/11/06</td><td><a href="https://github.com/aws/aws-cli/tree/2.39.6" target="_blank" rel="noopener noreferrer">公式タグ</a><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank" rel="noopener noreferrer">Windowsインストール</a></td></tr>
+<tr><td>13</td><td>AWS PV Drivers</td><td>8.6.1</td><td>2026/07/21</td><td><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html" target="_blank" rel="noopener noreferrer">AWS</a></td></tr>
+<tr><td>14</td><td>aws-cfn-bootstrap</td><td>最新版未確定（中国向け英語：2.0-42／グローバル英語：2.0-41／日本語：2.0-40。公式掲載差異あり）</td><td>2026/10/20（中国向け英語）／2026/09/24（英語）／2026/07/16（日本語）</td><td><a href="https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html" target="_blank" rel="noopener noreferrer">中国向け英語</a><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html" target="_blank" rel="noopener noreferrer">グローバル英語</a><a href="https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html" target="_blank" rel="noopener noreferrer">日本語</a></td></tr>
+<tr><td>15</td><td>CSLGuard Solutions 5.90 Agent</td><td>最新版未確定（Agent単体の公開値未確認）</td><td>未確認</td><td><a href="https://www.ntt-tx.co.jp/whatsnew/2022/221209.html" target="_blank" rel="noopener noreferrer">NTTテクノクロス</a></td></tr>
+<tr><td>16</td><td>Extensible SNMP Agent</td><td>最新版未確定（製造元・製品系列未特定）</td><td>未確認</td><td><a href="https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2024-127/" target="_blank" rel="noopener noreferrer">日立製作所・参考情報（同一製品か未確認）</a></td></tr>
+<tr><td>17</td><td>Tera Term</td><td>5.7.1</td><td>2026/10/09</td><td><a href="https://github.com/TeraTermProject/teraterm/releases" target="_blank" rel="noopener noreferrer">公式GitHub</a></td></tr>
+<tr><td>18</td><td>Microsoft .NET 8.0.7 - Windows Server Hosting</td><td>Hosting Bundle 8.0.33（親パッケージ）</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>19</td><td>Microsoft .NET Runtime - (x86)（8系列）</td><td>8.0.33</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>20</td><td>Microsoft .NET Runtime - (x64)（8系列）</td><td>8.0.33</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>21</td><td>Microsoft ASP.NET Core Shared Framework - (x86)（8系列）</td><td>8.0.33</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>22</td><td>Microsoft ASP.NET Core Shared Framework - (x64)（8系列）</td><td>8.0.33</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>23</td><td>Microsoft ASP.NET Core Hosting Bundle Options（.NET 8対応）</td><td>最新版未確定（個別バージョン未確認。親Hosting Bundle：8.0.33）</td><td>未確認</td><td><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>24</td><td>Microsoft ASP.NET Core Module V2（.NET 8対応）</td><td>18.0.26296.33</td><td>2026/10/25</td><td><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0" target="_blank" rel="noopener noreferrer">Microsoft .NET 8</a></td></tr>
+<tr><td>25</td><td>Canon Generic Plus LIPSLX Printer Driver Uninstaller</td><td>最新版未確定（アンインストーラー単体）</td><td>未確認</td><td><a href="https://oip.manual.canon/USRMA-3660-zz-DR-enUV/contents/dwu-inst-updt_uninst-uninst.html" target="_blank" rel="noopener noreferrer">Canon公式マニュアル</a></td></tr>
+<tr class="section"><td colspan="5">■ OS・ミドルウェア等（8項目）</td></tr>
+<tr><td>26</td><td>Windows Server 2022</td><td>KB5134140（OSビルド 20348.5773）</td><td>2026/10/26</td><td><a href="https://support.microsoft.com/en-us/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update" target="_blank" rel="noopener noreferrer">Microsoft Support</a></td></tr>
+<tr><td>27</td><td>Office LTSC 2024</td><td>バージョン 2408（ビルド 17932.21056）</td><td>2026/10/13</td><td><a href="https://learn.microsoft.com/en-us/officeupdates/update-history-office-2024" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>28</td><td>Microsoft Edge（Stableチャネル）</td><td>157.0.4341.42</td><td>2026/11/05</td><td><a href="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>29</td><td>SQL Server 2022 CU</td><td>CU27／KB5104824／ビルド 16.0.4295.3</td><td>2026/09/15</td><td><a href="https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates" target="_blank" rel="noopener noreferrer">Microsoft Support</a></td></tr>
+<tr><td>30</td><td>SQL Server 2022 CU＋GDR</td><td>CU27＋GDR／KB5126934／ビルド 16.0.4305.5</td><td>2026/10/13</td><td><a href="https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates" target="_blank" rel="noopener noreferrer">Microsoft Support</a></td></tr>
+<tr><td>31</td><td>SQL Server 2022 GDR</td><td>KB5128493／ビルド 16.0.1210.3</td><td>2026/10/13</td><td><a href="https://support.microsoft.com/ja-jp/servicing/sql/kb321185-download-and-install-latest-updates" target="_blank" rel="noopener noreferrer">Microsoft Support</a></td></tr>
+<tr><td>32</td><td>Microsoft JDBC Driver for SQL Server</td><td>13.6.0</td><td>2026/09/10</td><td><a href="https://learn.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver" target="_blank" rel="noopener noreferrer">Microsoft</a></td></tr>
+<tr><td>33</td><td>.NET Framework 3.5および4.8の累積的な更新プログラム（Windows Server 2022）</td><td>KB5127687</td><td>2026/10/13</td><td><a href="https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5127687" target="_blank" rel="noopener noreferrer">Microsoft Support</a></td></tr>
+</tbody></table></div>
+</body>
+</html>
