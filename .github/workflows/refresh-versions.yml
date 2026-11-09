@@ -1,0 +1,67 @@
+name: Refresh software versions
+
+on:
+  schedule:
+    # 23:30 UTC Sunday–Thursday = 08:30 JST Monday–Friday (including holidays).
+    - cron: '30 23 * * 0-4'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # Validate initial setup and subsequent scheduling configuration changes.
+    paths: ['.github/workflows/refresh-versions.yml']
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-software-versions
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out main
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Test release selection and update boundaries
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -m unittest discover -s tests -v
+      - name: Fetch and verify all 33 official-source checks
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/refresh.py --report "$RUNNER_TEMP/software-research.json"
+      - name: Commit only approved data fields and generated HTML
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          python3 scripts/check_update_scope.py
+          git diff --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- versions.json index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update software versions and JST research timestamp'
+            git push origin HEAD:main
+          fi
+      - name: Build Pages and verify the public HTML
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/publish_pages.py --commit "$(git rev-parse HEAD)"
+      - name: Retain this run's official-source evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: software-research-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/software-research.json
+          if-no-files-found: warn
+          retention-days: 14

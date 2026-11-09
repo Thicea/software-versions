@@ -8,8 +8,9 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def render():
-    data = json.loads((ROOT / 'versions.json').read_text())
+def render(data=None):
+    if data is None:
+        data = json.loads((ROOT / 'versions.json').read_text())
     rows = []
     for item in data['items']:
         if item['no'] in (1, 26):
@@ -38,6 +39,7 @@ def render():
 
 if __name__ == '__main__':
     # Run the same format checks used before publishing, before writing any HTML.
-    import validate
+    from validate import validate
+    validate(json.loads((ROOT / 'versions.json').read_text()))
     (ROOT / 'index.html').write_text(render())
     print('index.html を生成しました')
