@@ -4,6 +4,9 @@ on:
   schedule:
     # 23:30 UTC Sunday–Thursday = 08:30 JST Monday–Friday (including holidays).
     - cron: '30 23 * * 0-4'
+    # Recovery triggers: only investigate if this morning is still incomplete.
+    - cron: '45 23 * * 0-4'
+    - cron: '15 0 * * 1-5'
   workflow_dispatch:
   push:
     branches: [main]
@@ -35,11 +38,18 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python3 -m unittest discover -s tests -v
+      - name: Check whether this morning needs fresh research
+        id: research
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/check_refresh_due.py --event '${{ github.event_name }}' >> "$GITHUB_OUTPUT"
       - name: Fetch and verify all 33 official-source checks
+        if: steps.research.outputs.due == 'true'
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python3 scripts/refresh.py --report "$RUNNER_TEMP/software-research.json"
       - name: Commit only approved data fields and generated HTML
+        if: steps.research.outputs.due == 'true'
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
@@ -58,7 +68,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python3 scripts/publish_pages.py --commit "$(git rev-parse HEAD)"
       - name: Retain this run's official-source evidence
-        if: always()
+        if: ${{ always() && steps.research.outputs.due == 'true' }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: software-research-${{ github.run_id }}-${{ github.run_attempt }}
