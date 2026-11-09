@@ -1,0 +1,443 @@
+{
+  "checkedAt": "2026-11-09T20:21:01+09:00",
+  "sources": [
+    {
+      "id": "vc",
+      "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
+      "status": "200|https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.524787+00:00",
+      "sha256": "bccffcd89334676927ebd5644624395f50fef71d7fd68608041b4961299f0923",
+      "bytes": 65473
+    },
+    {
+      "id": "vc-x86",
+      "url": "https://aka.ms/vc14/vc_redist.x86.exe",
+      "status": "200|https://download.visualstudio.microsoft.com/download/pr/6ad63323-a427-4c58-8464-9f1f19f62359/F0BAB33A302B3CDB2E11113760D016F54FD3D2632C65BA7834FAC4F0ABD7F1A3/VC_redist.x86.exe",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.516686+00:00",
+      "sha256": "f0bab33a302b3cdb2e11113760d016f54fd3d2632c65ba7834fac4f0abd7f1a3",
+      "bytes": 6941536,
+      "peVersionResource": {
+        "fileVersion": "14.51.36247.0",
+        "productVersion": "14.51.36247.0",
+        "machine": "0x14c"
+      }
+    },
+    {
+      "id": "vc-x64",
+      "url": "https://aka.ms/vc14/vc_redist.x64.exe",
+      "status": "200|https://download.visualstudio.microsoft.com/download/pr/ebdab8e5-1d7b-4d9f-a11b-cbb1720c3b12/843068991DAAA1F73AD9F6239BCE4D0F6A07A51F18C37EA2A867E9BECA71295C/VC_redist.x64.exe",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.702188+00:00",
+      "sha256": "843068991daaa1f73ad9f6239bce4d0f6a07a51f18c37ea2a867e9beca71295c",
+      "bytes": 18731856,
+      "peVersionResource": {
+        "fileVersion": "14.51.36247.0",
+        "productVersion": "14.51.36247.0",
+        "machine": "0x14c"
+      }
+    },
+    {
+      "id": "vc-2013-note",
+      "url": "https://support.microsoft.com/topic/update-for-visual-c-2013-redistributable-package-d8ccd6a5-4e26-c290-517b-8da6cfdf4f10",
+      "status": "200|https://support.microsoft.com/en-us/servicing/visual-studio/update/2020/11/update-for-visual-c-2013-redistributable-package",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:16:49.341585+00:00",
+      "sha256": "ea1a1b1f1f31171dfc4dbcada9b7cabb452a374919b0bb8968dc56418e54b5d7",
+      "bytes": 111203
+    },
+    {
+      "id": "msolap",
+      "url": "https://learn.microsoft.com/en-us/analysis-services/client-libraries?view=asallproducts-allversions",
+      "status": "200|https://learn.microsoft.com/en-us/analysis-services/client-libraries?view=asallproducts-allversions",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.502459+00:00",
+      "sha256": "2771ad3981cd6b1ad9e351a385b291a1f898c7a1b1da3e38e8f0be0f0162f197",
+      "bytes": 73225
+    },
+    {
+      "id": "odbc",
+      "url": "https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
+      "status": "200|https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.671010+00:00",
+      "sha256": "26ee94b7f275d3f18d0c3a670062800271570133b9387d45e3ee3261953e8757",
+      "bytes": 228083
+    },
+    {
+      "id": "oledb",
+      "url": "https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server",
+      "status": "200|https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver17",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.653317+00:00",
+      "sha256": "8c2bc6986b4e5f77969803f42bca74629c71b3d7ba549b674bc2890286f0ef9a",
+      "bytes": 200844
+    },
+    {
+      "id": "ssms",
+      "url": "https://learn.microsoft.com/en-us/ssms/release-notes-20",
+      "status": "200|https://learn.microsoft.com/en-us/ssms/release-notes-20",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.513957+00:00",
+      "sha256": "8e3965e2f2dc0c7527c4b56497c05d4e3f0a903ae79a65675435d29863c8f1ec",
+      "bytes": 89994
+    },
+    {
+      "id": "vsta",
+      "url": "https://www.microsoft.com/ja-jp/download/details.aspx?id=58317",
+      "status": "200|https://www.microsoft.com/ja-jp/download/details.aspx?id=58317",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.615005+00:00",
+      "sha256": "c655871b1de47371d1b5b0dc54bc476c1d7f64e4c55aed826f006fa794d465b9",
+      "bytes": 122306
+    },
+    {
+      "id": "vsta-exe",
+      "url": "https://download.microsoft.com/download/e7e20e87-14f9-4f72-ad3d-56239300cfad/vsta_2019_setup_JPN.exe",
+      "status": "200|https://download.microsoft.com/download/e7e20e87-14f9-4f72-ad3d-56239300cfad/vsta_2019_setup_JPN.exe",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:26.972027+00:00",
+      "sha256": "f3dde74ca03e32e70213147255e18fdeb751580e9bfdce20a3295fcc8ba554ea",
+      "bytes": 10288712,
+      "peVersionResource": {
+        "fileVersion": "16.0.35907.0",
+        "productVersion": "16.0.35907.0",
+        "machine": "0x14c"
+      }
+    },
+    {
+      "id": "ec2",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html",
+      "status": "200|https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.061929+00:00",
+      "sha256": "c395069afe0309f1d520caacc58c90ad042f038abd4a5f38bc78af1ad0d03d9f",
+      "bytes": 45737
+    },
+    {
+      "id": "ssm",
+      "url": "https://github.com/aws/amazon-ssm-agent/releases",
+      "status": "200|https://github.com/aws/amazon-ssm-agent/releases",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.291689+00:00",
+      "sha256": "1073c8a915a4bc79097933e1cac7601a482a45fdcde012866f6700be29be9a51",
+      "bytes": 346026
+    },
+    {
+      "id": "ssm-tag",
+      "url": "https://github.com/aws/amazon-ssm-agent/releases/tag/3.3.5708.0",
+      "status": "200|https://github.com/aws/amazon-ssm-agent/releases/tag/3.3.5708.0",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:15:14.188148+00:00",
+      "sha256": "89815a49db37b9e19df6c789fd92750cfb634c1923303ad3224f1d0e6e690f80",
+      "bytes": 147404
+    },
+    {
+      "id": "cli",
+      "url": "https://raw.githubusercontent.com/aws/aws-cli/v2/CHANGELOG.rst",
+      "status": "200|https://raw.githubusercontent.com/aws/aws-cli/v2/CHANGELOG.rst",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:07.996248+00:00",
+      "sha256": "7fa79b7466683d54537b419109ad827e4c61038184473fd49951adc99f883113",
+      "bytes": 1498001
+    },
+    {
+      "id": "cli-tag",
+      "url": "https://github.com/aws/aws-cli/releases/tag/2.39.6",
+      "status": "200|https://github.com/aws/aws-cli/releases/tag/2.39.6",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:15:14.327500+00:00",
+      "sha256": "d9a4a1fde424250a154dcd823233b96ad37bc1136525c33dc68809c0561b1ff6",
+      "bytes": 156980
+    },
+    {
+      "id": "cli-install",
+      "url": "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html",
+      "status": "200|https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.026408+00:00",
+      "sha256": "cce75f4060dc46cf84bb7a4abc3d2a2b3b2752507660042d0f49d920a14165c5",
+      "bytes": 139119
+    },
+    {
+      "id": "pv",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html",
+      "status": "200|https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.223833+00:00",
+      "sha256": "ecc0777e0219dd213eea60f395d90c377980486afd51b34e7048e5489f895348",
+      "bytes": 52918
+    },
+    {
+      "id": "cfn-en",
+      "url": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "status": "200|https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.101963+00:00",
+      "sha256": "3c9178bc03f56d839555c80a931a45224a520f7bc4bc5633dc0d7ff0fafa9c3d",
+      "bytes": 111623
+    },
+    {
+      "id": "cfn-ja",
+      "url": "https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "status": "200|https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.380864+00:00",
+      "sha256": "d9b7ee4afdab866a1ed9b7d9a6a61980d32d5bb1f96513b9ba44a33217300289",
+      "bytes": 105750
+    },
+    {
+      "id": "cfn-cn",
+      "url": "https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "status": "200|https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:14.843057+00:00",
+      "sha256": "63dd85ebf1ab85b4233a26c08aea54449547bf41fb27c4501bb1ecbe157af7ea",
+      "bytes": 106971
+    },
+    {
+      "id": "csl",
+      "url": "https://www.ntt-tx.co.jp/whatsnew/2022/221209.html",
+      "status": "200|https://www.ntt-tx.co.jp/whatsnew/2022/221209.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.506913+00:00",
+      "sha256": "211cda77dc4a581cde7f0ec9789412cd5e81b56adf0ccab606509c98396b97be",
+      "bytes": 46262
+    },
+    {
+      "id": "csl-detail",
+      "url": "https://www.ntt-tx.co.jp/products/privilege/cslact.html",
+      "status": "200|https://www.ntt-tx.co.jp/products/privilege/cslact.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:17:39.440414+00:00",
+      "sha256": "684a5891d0d2a2c831a34f780dca435ac93d5d182ff7e9df8425cdf54e0a82fa",
+      "bytes": 67210
+    },
+    {
+      "id": "snmp",
+      "url": "https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2024-127/",
+      "status": "200|https://www.hitachi.com/products/it/software/security/info/vuls/hitachi-sec-2024-127/",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.593882+00:00",
+      "sha256": "d918352e803c75c8f8cbe7f2b98cf399b744248baef359ef36c28596ef1c77e8",
+      "bytes": 15692
+    },
+    {
+      "id": "tera",
+      "url": "https://github.com/TeraTermProject/teraterm/releases",
+      "status": "200|https://github.com/TeraTermProject/teraterm/releases",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.251625+00:00",
+      "sha256": "6d2e9f061e95a988c31fb94e406f687350f7de5a03b67c3d72407b71dc9a6898",
+      "bytes": 545801
+    },
+    {
+      "id": "dotnet",
+      "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0",
+      "status": "200|https://dotnet.microsoft.com/en-us/download/dotnet/8.0",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.985684+00:00",
+      "sha256": "0b8f78a76cbd427c5ad21f2912eda631042b19ff12197e80cb7eb7d4387ef718",
+      "bytes": 1772484
+    },
+    {
+      "id": "dotnet-meta",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json",
+      "status": "200|https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:08.652297+00:00",
+      "sha256": "e11dbb88706ea3ba9ac4e3b022f1ab9b49e7fcbe6448f63fa6764199b7cca822",
+      "bytes": 1664962
+    },
+    {
+      "id": "hosting-options",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-8.0",
+      "status": "200|https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-8.0",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:19:30.225424+00:00",
+      "sha256": "249ea925efc319aa1c83386f5db0e4d255a1e55a2eba810e7d1fdb554a98f1c2",
+      "bytes": 59443
+    },
+    {
+      "id": "canon",
+      "url": "https://oip.manual.canon/USRMA-3660-zz-DR-enUV/contents/dwu-inst-updt_uninst-uninst.html",
+      "status": "200|https://oip.manual.canon/USRMA-3660-zz-DR-enUV/contents/dwu-inst-updt_uninst-uninst.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.296123+00:00",
+      "sha256": "441ac65ea144077c3dc34d76abc8065372a6a280f44ea5ca7de19ca61b8ffb2e",
+      "bytes": 6060
+    },
+    {
+      "id": "canon-top",
+      "url": "https://oip.manual.canon/USRMA-3660-zz-DR-enUV/index.html",
+      "status": "200|https://oip.manual.canon/USRMA-3660-zz-DR-enUV/index.html",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:16:49.481349+00:00",
+      "sha256": "d73fe8ba51cb0a71129749c0086f7c04bc12ec4f9ca603b0df07aa532419170d",
+      "bytes": 4921
+    },
+    {
+      "id": "windows-current",
+      "url": "https://support.microsoft.com/en-us/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update",
+      "status": "200|https://support.microsoft.com/en-us/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.285782+00:00",
+      "sha256": "146473914a3da42f0f5c8fab3942033eb8fd2ef84d4fbe38bbc9b544c10e1f56",
+      "bytes": 155245
+    },
+    {
+      "id": "windows-history",
+      "url": "https://support.microsoft.com/en-us/servicing/os/windows-server/2021/07/windows-server-2022-update-history",
+      "status": "200|https://support.microsoft.com/en-us/servicing/os/windows-server/2021/07/windows-server-2022-update-history",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:15:13.947060+00:00",
+      "sha256": "161a0805111410fdbd4cf2c0638b80316fc274556a8e0bb4a995d7dda86b0dfb",
+      "bytes": 144238
+    },
+    {
+      "id": "office",
+      "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-2024",
+      "status": "200|https://learn.microsoft.com/en-us/officeupdates/update-history-office-2024",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.356921+00:00",
+      "sha256": "0475d6c501f250b797173f047d7b006767c12fbe35474948540b678603be534e",
+      "bytes": 65180
+    },
+    {
+      "id": "edge",
+      "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
+      "status": "200|https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.414310+00:00",
+      "sha256": "92895f27d2dd7065f14a9fc5465d8134c4ba76cc7adfbb78795aedce492cfbff",
+      "bytes": 72519
+    },
+    {
+      "id": "sql-en",
+      "url": "https://support.microsoft.com/en-us/servicing/sql/kb321185-download-and-install-latest-updates",
+      "status": "200|https://support.microsoft.com/en-us/servicing/sql/kb321185-download-and-install-latest-updates",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.014890+00:00",
+      "sha256": "7ee74d8cd797b433dd5ece3ceb093c861879090e50a0457db2a3cc31876b79e3",
+      "bytes": 247579
+    },
+    {
+      "id": "sql-builds",
+      "url": "https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/kb5023451-build-versions",
+      "status": "200|https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/kb5023451-build-versions",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.046744+00:00",
+      "sha256": "b83dfa28b4914be611572633f071eae5657b3c55c6132d6e97b89f3023d75351",
+      "bytes": 134830
+    },
+    {
+      "id": "sql-cu",
+      "url": "https://support.microsoft.com/en-us/help/5104824",
+      "status": "200|https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/cumulative-update/kb5104824-cu27",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.129786+00:00",
+      "sha256": "8feee2d716dcb6131ebe011397cbafa4e0305c3a646c2334a6443287ee90c983",
+      "bytes": 161814
+    },
+    {
+      "id": "sql-cu-gdr",
+      "url": "https://support.microsoft.com/en-us/help/5126934",
+      "status": "200|https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/cumulative-update/kb5126934-cu27-gdr-october-2026",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.293535+00:00",
+      "sha256": "2e8175131e4c1ed07727170d57467a5bd30cb64b1cc44ae9587a70d142c4e329",
+      "bytes": 150118
+    },
+    {
+      "id": "sql-gdr",
+      "url": "https://support.microsoft.com/en-us/help/5128493",
+      "status": "200|https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/general-distribution-release/kb5128493-october-2026",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.237334+00:00",
+      "sha256": "a416096de6aefcef646fdb05abc1ead8c61db01c6b66161ef1e11378749af7b5",
+      "bytes": 136421
+    },
+    {
+      "id": "jdbc",
+      "url": "https://learn.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver",
+      "status": "200|https://learn.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver?view=sql-server-ver17",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:10.115813+00:00",
+      "sha256": "e71cebf719c2b4ee27ff36ced6e512256990fcdcb0f329195e223cd30f4f66f6",
+      "bytes": 391387
+    },
+    {
+      "id": "jdbc-gh",
+      "url": "https://github.com/microsoft/mssql-jdbc/releases",
+      "status": "200|https://github.com/microsoft/mssql-jdbc/releases",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:10.881553+00:00",
+      "sha256": "7f7c96fa96af3f54053e2a0ced1180de0397f237656bf452aee75ca0cec7fd24",
+      "bytes": 485039
+    },
+    {
+      "id": "jdbc-tag",
+      "url": "https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2",
+      "status": "200|https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:15:14.612286+00:00",
+      "sha256": "4f8dc4e6a5b8b320fb55b187a74865c4242bf85e2736d05d28e5f886147a4950",
+      "bytes": 158581
+    },
+    {
+      "id": "framework",
+      "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5127687",
+      "status": "200|https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5127687",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:13:09.577868+00:00",
+      "sha256": "7e56bd0f8b787416357b17463384364dc28408b2e508427e75d8631f89a60c53",
+      "bytes": 112354
+    },
+    {
+      "id": "framework-summary",
+      "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5128928",
+      "status": "200|https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5128928",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:17:38.021022+00:00",
+      "sha256": "9e396d6afd4645517ce3135f07820f3baecf5d9692cf060aedba2cc506992bda",
+      "bytes": 129138
+    },
+    {
+      "id": "framework-history",
+      "url": "https://support.microsoft.com/en-us/servicing/dotnetframework/microsoft-server/2022/2021/09/history-of-cumulative-updates-for-net-framework-for-windows-server-2022",
+      "status": "200|https://support.microsoft.com/en-us/servicing/dotnetframework/microsoft-server/2022/2021/09/history-of-cumulative-updates-for-net-framework-for-windows-server-2022",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:18:10.568604+00:00",
+      "sha256": "9f4999337b167ad887dd38ca00966503b380085b919ff34802a0357d32d1309e",
+      "bytes": 103322
+    },
+    {
+      "id": "framework-toc",
+      "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/toc.json",
+      "status": "200|https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/toc.json",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:18:57.862340+00:00",
+      "sha256": "31ba4232b7204a5adcaeac69b2449927b75747426d21ce69131871e62df287b3",
+      "bytes": 1742
+    },
+    {
+      "id": "framework-toc-en",
+      "url": "https://support.microsoft.com/en-us/servicing/dotnetframework/microsoft-server/2022/toc.json",
+      "status": "200|https://support.microsoft.com/en-us/servicing/dotnetframework/microsoft-server/2022/toc.json",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:18:57.908973+00:00",
+      "sha256": "a1c6e9e924f2dab357275dab4f4a6145c8b678d7b85dde5065f1ec0bd08e8e30",
+      "bytes": 1464
+    },
+    {
+      "id": "pages",
+      "url": "https://thicea.github.io/software-versions/",
+      "status": "200|https://thicea.github.io/software-versions/",
+      "error": "",
+      "retrievedAt": "2026-11-09T11:14:25.514063+00:00",
+      "sha256": "a46eece8d4f51793b2daeca8dc6915f628de70450f1cb6ec2c7b6d6e57cdc2f0",
+      "bytes": 14398
+    }
+  ]
+}
