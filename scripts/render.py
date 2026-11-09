@@ -8,6 +8,12 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def render_products(data):
+    """Generate the product list from the authoritative names in versions.json."""
+    products = [{'no': item['no'], 'name': item['name']} for item in data['items']]
+    return json.dumps(products, ensure_ascii=False, indent=2) + '\n'
+
+
 def render(data=None):
     if data is None:
         data = json.loads((ROOT / 'versions.json').read_text())
@@ -37,9 +43,17 @@ def render(data=None):
     return template.replace('{{ROWS}}', '\n'.join(rows)).replace('{{CHECKED_AT}}', checked_at)
 
 
-if __name__ == '__main__':
-    # Run the same format checks used before publishing, before writing any HTML.
+def main():
+    # Validate and prepare both outputs before changing either generated file.
     from validate import validate
-    validate(json.loads((ROOT / 'versions.json').read_text()))
-    (ROOT / 'index.html').write_text(render())
-    print('index.html を生成しました')
+    data = json.loads((ROOT / 'versions.json').read_text())
+    validate(data)
+    html = render(data)
+    products = render_products(data)
+    (ROOT / 'index.html').write_text(html)
+    (ROOT / 'products.json').write_text(products)
+    print('versions.json から index.html と products.json を生成しました')
+
+
+if __name__ == '__main__':
+    main()
