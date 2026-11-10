@@ -9,11 +9,11 @@
       "sources": [
         {
           "label": "Microsoft公式配布一覧",
-          "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+          "url": "https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist"
         },
         {
           "label": "Microsoft公式更新情報",
-          "url": "https://support.microsoft.com/topic/update-for-visual-c-2013-redistributable-package-d8ccd6a5-4e26-c290-517b-8da6cfdf4f10"
+          "url": "https://support.microsoft.com/ja-jp/servicing/visual-studio/update/2020/11/update-for-visual-c-2013-redistributable-package"
         }
       ]
     },
@@ -25,11 +25,11 @@
       "sources": [
         {
           "label": "Microsoft公式配布一覧",
-          "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+          "url": "https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist"
         },
         {
           "label": "Microsoft公式更新情報",
-          "url": "https://support.microsoft.com/topic/update-for-visual-c-2013-redistributable-package-d8ccd6a5-4e26-c290-517b-8da6cfdf4f10"
+          "url": "https://support.microsoft.com/ja-jp/servicing/visual-studio/update/2020/11/update-for-visual-c-2013-redistributable-package"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "sources": [
         {
           "label": "Microsoft公式配布一覧",
-          "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+          "url": "https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist"
         }
       ]
     },
@@ -53,7 +53,7 @@
       "sources": [
         {
           "label": "Microsoft公式配布一覧",
-          "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+          "url": "https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist"
         }
       ]
     },
@@ -65,7 +65,7 @@
       "sources": [
         {
           "label": "Microsoft公式クライアントライブラリ",
-          "url": "https://learn.microsoft.com/en-us/analysis-services/client-libraries?view=asallproducts-allversions"
+          "url": "https://learn.microsoft.com/ja-jp/analysis-services/client-libraries?view=asallproducts-allversions"
         }
       ]
     },
@@ -77,7 +77,7 @@
       "sources": [
         {
           "label": "Microsoft公式リリースノート（17系列）",
-          "url": "https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows"
+          "url": "https://learn.microsoft.com/ja-jp/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows"
         }
       ]
     },
@@ -89,7 +89,7 @@
       "sources": [
         {
           "label": "Microsoft公式リリースノート（18系列）",
-          "url": "https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server"
+          "url": "https://learn.microsoft.com/ja-jp/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server"
         }
       ]
     },
@@ -101,7 +101,7 @@
       "sources": [
         {
           "label": "Microsoft公式リリースノート（20系列）",
-          "url": "https://learn.microsoft.com/en-us/ssms/release-notes-20"
+          "url": "https://learn.microsoft.com/ja-jp/ssms/release-notes-20"
         }
       ]
     },
@@ -125,7 +125,7 @@
       "sources": [
         {
           "label": "AWS公式更新履歴（v2）",
-          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html"
+          "url": "https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2launchv2-versions.html"
         }
       ]
     },
@@ -157,7 +157,7 @@
         },
         {
           "label": "AWS公式Windows配布案内",
-          "url": "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+          "url": "https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html"
         }
       ]
     },
@@ -169,7 +169,7 @@
       "sources": [
         {
           "label": "AWS公式PV Drivers更新履歴",
-          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html"
+          "url": "https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/xen-drivers-overview.html"
         }
       ]
     },
@@ -237,7 +237,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -249,7 +249,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -261,7 +261,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -273,7 +273,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -285,7 +285,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -297,7 +297,7 @@
       "sources": [
         {
           "label": "Microsoft公式Hosting Bundle・Options解説",
-          "url": "https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-8.0"
+          "url": "https://learn.microsoft.com/ja-jp/aspnet/core/host-and-deploy/iis/hosting-bundle?view=aspnetcore-8.0"
         }
       ]
     },
@@ -309,7 +309,7 @@
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
-          "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
+          "url": "https://dotnet.microsoft.com/ja-jp/download/dotnet/8.0"
         }
       ]
     },
@@ -321,7 +321,7 @@
       "sources": [
         {
           "label": "Canon公式アンインストール手順（単体の版記載なし）",
-          "url": "https://oip.manual.canon/USRMA-3660-zz-DR-enUV/contents/dwu-inst-updt_uninst-uninst.html"
+          "url": "https://oip.manual.canon/USRMA-3659-zz-DR-jaJP/contents/dwu-inst-updt_uninst-uninst.html"
         }
       ]
     },
@@ -333,11 +333,11 @@
       "sources": [
         {
           "label": "Microsoft公式KB",
-          "url": "https://support.microsoft.com/en-us/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update"
+          "url": "https://support.microsoft.com/ja-jp/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update"
         },
         {
           "label": "Windows Server 2022公式更新履歴",
-          "url": "https://support.microsoft.com/en-us/servicing/os/windows-server/2021/07/windows-server-2022-update-history"
+          "url": "https://support.microsoft.com/ja-jp/servicing/os/windows-server/2021/07/windows-server-2022-update-history"
         }
       ]
     },
@@ -349,7 +349,7 @@
       "sources": [
         {
           "label": "Microsoft公式Office LTSC 2024更新履歴",
-          "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-2024"
+          "url": "https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024"
         }
       ]
     },
@@ -361,7 +361,7 @@
       "sources": [
         {
           "label": "Microsoft公式Stableリリースノート",
-          "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel"
+          "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-stable-channel"
         }
       ]
     },
@@ -373,11 +373,11 @@
       "sources": [
         {
           "label": "Microsoft公式CU27記事",
-          "url": "https://support.microsoft.com/en-us/help/5104824"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/cumulative-update/kb5104824-cu27"
         },
         {
           "label": "Microsoft公式2022ビルド一覧",
-          "url": "https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/kb5023451-build-versions"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/kb5023451-build-versions"
         }
       ]
     },
@@ -389,11 +389,11 @@
       "sources": [
         {
           "label": "Microsoft公式CU27向けセキュリティ更新",
-          "url": "https://support.microsoft.com/en-us/help/5126934"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/cumulative-update/kb5126934-cu27-gdr-october-2026"
         },
         {
           "label": "Microsoft公式2022ビルド一覧",
-          "url": "https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/kb5023451-build-versions"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/kb5023451-build-versions"
         }
       ]
     },
@@ -405,11 +405,11 @@
       "sources": [
         {
           "label": "Microsoft公式GDR記事",
-          "url": "https://support.microsoft.com/en-us/help/5128493"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/general-distribution-release/kb5128493-october-2026"
         },
         {
           "label": "Microsoft公式2022ビルド一覧",
-          "url": "https://support.microsoft.com/en-us/servicing/sql/sql-server-2022/kb5023451-build-versions"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/kb5023451-build-versions"
         }
       ]
     },
@@ -425,7 +425,7 @@
         },
         {
           "label": "Microsoft公式リリースノート：13.6.0",
-          "url": "https://learn.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver"
+          "url": "https://learn.microsoft.com/ja-jp/sql/connect/jdbc/release-notes-for-the-jdbc-driver"
         }
       ]
     },
