@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-10T08:42:55+09:00",
+  "checkedAt": "2026-11-11T08:35:33+09:00",
   "items": [
     {
       "no": 1,
@@ -36,7 +36,7 @@
     {
       "no": 3,
       "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86)",
-      "version": "14.51.36247.0",
+      "version": "14.52.37029.0",
       "releaseDate": "未確認",
       "sources": [
         {
@@ -48,7 +48,7 @@
     {
       "no": 4,
       "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64)",
-      "version": "14.51.36247.0",
+      "version": "14.52.37029.0",
       "releaseDate": "未確認",
       "sources": [
         {
@@ -132,8 +132,8 @@
     {
       "no": 11,
       "name": "Amazon SSM Agent",
-      "version": "3.3.5708.0",
-      "releaseDate": "2026/11/02",
+      "version": "3.3.5828.0",
+      "releaseDate": "2026/11/09",
       "sources": [
         {
           "label": "AWS公式GitHubリリース",
@@ -144,8 +144,8 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.39.7（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/09",
+      "version": "2.40.0（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "AWS公式タグ",
@@ -232,8 +232,8 @@
     {
       "no": 18,
       "name": "Microsoft .NET 8.0.7 - Windows Server Hosting",
-      "version": "Hosting Bundle 8.0.33",
-      "releaseDate": "2026/10/25",
+      "version": "Hosting Bundle 8.0.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -244,8 +244,8 @@
     {
       "no": 19,
       "name": "Microsoft .NET Runtime - (x86)",
-      "version": "8.0.33",
-      "releaseDate": "2026/10/25",
+      "version": "8.0.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -256,8 +256,8 @@
     {
       "no": 20,
       "name": "Microsoft .NET Runtime - (x64)",
-      "version": "8.0.33",
-      "releaseDate": "2026/10/25",
+      "version": "8.0.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -268,8 +268,8 @@
     {
       "no": 21,
       "name": "Microsoft ASP.NET Core Shared Framework - (x86)",
-      "version": "8.0.33",
-      "releaseDate": "2026/10/25",
+      "version": "8.0.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -280,8 +280,8 @@
     {
       "no": 22,
       "name": "Microsoft ASP.NET Core Shared Framework - (x64)",
-      "version": "8.0.33",
-      "releaseDate": "2026/10/25",
+      "version": "8.0.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -304,8 +304,8 @@
     {
       "no": 24,
       "name": "Microsoft ASP.NET Core Module V2",
-      "version": "18.0.26296.33",
-      "releaseDate": "2026/10/25",
+      "version": "18.0.26296.34",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式.NET 8配布ページ",
@@ -328,8 +328,8 @@
     {
       "no": 26,
       "name": "Windows Server 2022",
-      "version": "KB5134140（OSビルド 20348.5773、帯域外更新）",
-      "releaseDate": "2026/10/26",
+      "version": "KB5131090（OSビルド 20348.5870）",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式KB",
@@ -345,7 +345,7 @@
       "no": 27,
       "name": "Office LTSC 2024",
       "version": "バージョン 2610（ビルド 20527.20150）",
-      "releaseDate": "2026/11/04",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式Office LTSC 2024更新履歴",
@@ -384,8 +384,8 @@
     {
       "no": 30,
       "name": "SQL Server 2022 CU＋GDR",
-      "version": "CU27＋GDR／KB5126934／ビルド 16.0.4305.5",
-      "releaseDate": "2026/10/13",
+      "version": "CU27＋GDR／KB5129300／ビルド 16.0.4315.2",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式CU27向けセキュリティ更新",
@@ -400,8 +400,8 @@
     {
       "no": 31,
       "name": "SQL Server 2022 GDR",
-      "version": "GDR／KB5128493／ビルド 16.0.1210.3",
-      "releaseDate": "2026/10/13",
+      "version": "GDR／KB5132747／ビルド 16.0.1220.3",
+      "releaseDate": "2026/11/10",
       "sources": [
         {
           "label": "Microsoft公式GDR記事",
