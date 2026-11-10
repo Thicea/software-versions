@@ -2,8 +2,8 @@ name: Refresh software versions
 
 on:
   schedule:
-    # 23:30 UTC Sunday–Thursday = 08:30 JST Monday–Friday (including holidays).
-    - cron: '30 23 * * 0-4'
+    # 23:15 UTC Sunday–Thursday = 08:15 JST Monday–Friday (including holidays).
+    - cron: '15 23 * * 0-4'
     # Recovery triggers: only investigate if this morning is still incomplete.
     - cron: '45 23 * * 0-4'
     - cron: '15 0 * * 1-5'

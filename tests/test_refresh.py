@@ -155,11 +155,11 @@ class UpdateBoundaryTests(unittest.TestCase):
 
     def test_cron_sunday_to_thursday_maps_to_jst_weekdays(self):
         workflow = (ROOT/'.github/workflows/refresh-versions.yml').read_text()
-        self.assertIn("cron: '30 23 * * 0-4'", workflow)
-        sunday = datetime(2026, 11, 8, 23, 30, tzinfo=timezone.utc)
+        self.assertIn("cron: '15 23 * * 0-4'", workflow)
+        sunday = datetime(2026, 11, 8, 23, 15, tzinfo=timezone.utc)
         local = [(sunday+timedelta(days=i)).astimezone(ZoneInfo('Asia/Tokyo')) for i in range(5)]
         self.assertEqual([d.weekday() for d in local], [0, 1, 2, 3, 4])
-        self.assertTrue(all((d.hour, d.minute) == (8, 30) for d in local))
+        self.assertTrue(all((d.hour, d.minute) == (8, 15) for d in local))
 
 
 class PublicationTests(unittest.TestCase):

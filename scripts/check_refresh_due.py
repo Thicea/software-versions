@@ -10,13 +10,14 @@ from validate import validate
 
 ROOT = Path(__file__).resolve().parents[1]
 JST = ZoneInfo('Asia/Tokyo')
+MORNING_START = time(8, 15)
 
 
 def research_due(data, now):
     if now.tzinfo is None:
         raise ValueError('Current time must include a timezone')
     now = now.astimezone(JST)
-    if now.weekday() >= 5 or now.time() < time(8, 30):
+    if now.weekday() >= 5 or now.time() < MORNING_START:
         return False
     if not data['checkedAt']:
         return True
@@ -24,7 +25,7 @@ def research_due(data, now):
     if checked.tzinfo is None or checked > now:
         raise ValueError('Research timestamp must be timezone-aware and not in the future')
     checked = checked.astimezone(JST)
-    return checked.date() != now.date() or checked.time() < time(8, 30)
+    return checked.date() != now.date() or checked.time() < MORNING_START
 
 
 def main():
