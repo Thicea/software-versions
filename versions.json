@@ -42,10 +42,6 @@
         {
           "label": "Microsoft公式配布一覧",
           "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
-        },
-        {
-          "label": "公式x86インストーラー（詳細ファイルバージョン確認）",
-          "url": "https://aka.ms/vc14/vc_redist.x86.exe"
         }
       ]
     },
@@ -58,10 +54,6 @@
         {
           "label": "Microsoft公式配布一覧",
           "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
-        },
-        {
-          "label": "公式x64インストーラー（詳細ファイルバージョン確認）",
-          "url": "https://aka.ms/vc14/vc_redist.x64.exe"
         }
       ]
     },
@@ -120,12 +112,8 @@
       "releaseDate": "未確認",
       "sources": [
         {
-          "label": "Microsoft公式ダウンロード",
+          "label": "Microsoft公式配布案内",
           "url": "https://www.microsoft.com/ja-jp/download/details.aspx?id=58317"
-        },
-        {
-          "label": "公式2019配布ファイル",
-          "url": "https://download.microsoft.com/download/e7e20e87-14f9-4f72-ad3d-56239300cfad/vsta_2019_setup_JPN.exe"
         }
       ]
     },
@@ -165,7 +153,7 @@
         },
         {
           "label": "AWS公式変更履歴",
-          "url": "https://raw.githubusercontent.com/aws/aws-cli/v2/CHANGELOG.rst"
+          "url": "https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst"
         },
         {
           "label": "AWS公式Windows配布案内",
@@ -250,10 +238,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -266,10 +250,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -282,10 +262,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -298,10 +274,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -314,10 +286,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -342,10 +310,6 @@
         {
           "label": "Microsoft公式.NET 8配布ページ",
           "url": "https://dotnet.microsoft.com/en-us/download/dotnet/8.0"
-        },
-        {
-          "label": "Microsoft公式配布メタデータ",
-          "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json"
         }
       ]
     },
@@ -474,14 +438,6 @@
         {
           "label": "Microsoft公式3.5／4.8向けKB",
           "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5127687"
-        },
-        {
-          "label": "Microsoft公式更新内訳",
-          "url": "https://support.microsoft.com/ja-jp/servicing/dotnetframework/microsoft-server/2022/2026/10/october-13-2026-5128928"
-        },
-        {
-          "label": "Microsoft公式更新履歴",
-          "url": "https://support.microsoft.com/en-us/servicing/dotnetframework/microsoft-server/2022/2021/09/history-of-cumulative-updates-for-net-framework-for-windows-server-2022"
         }
       ]
     }
