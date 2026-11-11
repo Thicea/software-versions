@@ -18,8 +18,16 @@ OFFICIAL_HOSTS = {
     'download.microsoft.com', 'download.visualstudio.microsoft.com',
     'docs.aws.amazon.com', 'docs.amazonaws.cn', 'dotnet.microsoft.com',
     'builds.dotnet.microsoft.com', 'github.com', 'raw.githubusercontent.com',
+    's3.amazonaws.com',
     'www.ntt-tx.co.jp', 'www.hitachi.com', 'oip.manual.canon',
 }
+
+
+def response_limit(url):
+    # The official SSM Windows bundle is larger than the usual document/installers.
+    if url == 'https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/windows_amd64/AmazonSSMAgentSetup.exe':
+        return 128 * 1024 * 1024
+    return 40 * 1024 * 1024
 
 
 class SourceError(ValueError):
@@ -35,6 +43,8 @@ def https_url(url):
     parts = urlsplit(url)
     require(parts.scheme == 'https' and parts.hostname in OFFICIAL_HOSTS
             and not parts.username and not parts.password, f'Unapproved official source: {parts.hostname}')
+    if parts.hostname == 's3.amazonaws.com':
+        require(parts.path.startswith('/ec2-downloads-windows/SSMAgent/'), 'Only the AWS-owned SSM distribution bucket is allowed')
     return url
 
 
@@ -65,8 +75,9 @@ class Client:
                 try:
                     with opener.open(request, timeout=35) as response:
                         https_url(response.url)
-                        payload = response.read(40 * 1024 * 1024 + 1)
-                        require(len(payload) <= 40 * 1024 * 1024, 'Official response exceeds size limit')
+                        limit = response_limit(url)
+                        payload = response.read(limit + 1)
+                        require(len(payload) <= limit, 'Official response exceeds size limit')
                         result = dict(url=url, finalUrl=response.url, httpStatus=response.status,
                                       retrievedAt=datetime.now(timezone.utc).isoformat(timespec='seconds'),
                                       sha256=hashlib.sha256(payload).hexdigest(), bytes=len(payload))

@@ -12,6 +12,8 @@ OLEDB = 'https://learn.microsoft.com/en-us/sql/connect/oledb/release-notes-for-o
 SSMS = 'https://learn.microsoft.com/en-us/ssms/release-notes-20'
 VSTA = 'https://www.microsoft.com/ja-jp/download/details.aspx?id=58317'
 EC2 = 'https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launchv2-versions.html'
+SSM_WINDOWS = 'https://docs.aws.amazon.com/systems-manager/latest/userguide/manually-install-ssm-agent-windows.html'
+SSM_WINDOWS_INSTALLER = 'https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/windows_amd64/AmazonSSMAgentSetup.exe'
 PV = 'https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/xen-drivers-overview.html'
 CFN = 'https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html'
 CFN_JA = 'https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/releasehistory-aws-cfn-bootstrap.html'
@@ -183,7 +185,18 @@ def github_release(client, repo, today):
     return max(candidates, key=lambda x: x[0])[1]
 
 
-def ssm(client, today): return {11: github_release(client, 'aws/amazon-ssm-agent', today)}
+def ssm(client, today):
+    doc = client.doc(SSM_WINDOWS)
+    links = {node.attrs.get('href') for node in doc.root.find_all('a')}
+    require(SSM_WINDOWS_INSTALLER in links, 'AWS official Windows x64 SSM installer link missing')
+    # Read the actual distribution artifact, without executing or installing it.
+    # A GitHub source release may precede the Windows installer distribution.
+    version = pe_version(client.get(SSM_WINDOWS_INSTALLER))
+    require(re.fullmatch(r'[1-9]\d*(?:\.\d+){3}', version), 'SSM Windows installer detailed version missing')
+    # File timestamps and the GitHub publication date are not its formal release date.
+    return {11: result(version + '（AWS公式Windows x64配布版）')}
+
+
 def tera(client, today): return {17: github_release(client, 'TeraTermProject/teraterm', today)}
 
 

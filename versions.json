@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-11T08:35:33+09:00",
+  "checkedAt": "2026-11-11T12:16:41+09:00",
   "items": [
     {
       "no": 1,
@@ -132,12 +132,12 @@
     {
       "no": 11,
       "name": "Amazon SSM Agent",
-      "version": "3.3.5828.0",
-      "releaseDate": "2026/11/09",
+      "version": "3.3.5708.0（AWS公式Windows x64配布版）",
+      "releaseDate": "未確認",
       "sources": [
         {
-          "label": "AWS公式GitHubリリース",
-          "url": "https://github.com/aws/amazon-ssm-agent/releases/tag/3.3.5708.0"
+          "label": "AWS公式Windows版配布案内",
+          "url": "https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/manually-install-ssm-agent-windows.html"
         }
       ]
     },
