@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-11T12:16:41+09:00",
+  "checkedAt": "2026-11-12T12:48:52+09:00",
   "items": [
     {
       "no": 1,
@@ -144,8 +144,8 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.40.0（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/10",
+      "version": "2.40.1（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/11",
       "sources": [
         {
           "label": "AWS公式タグ",
@@ -344,7 +344,7 @@
     {
       "no": 27,
       "name": "Office LTSC 2024",
-      "version": "バージョン 2610（ビルド 20527.20150）",
+      "version": "バージョン 2610（ビルド 20527.20196）",
       "releaseDate": "2026/11/10",
       "sources": [
         {
