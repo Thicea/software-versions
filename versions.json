@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-12T12:48:52+09:00",
+  "checkedAt": "2026-11-13T12:24:39+09:00",
   "items": [
     {
       "no": 1,
@@ -132,7 +132,7 @@
     {
       "no": 11,
       "name": "Amazon SSM Agent",
-      "version": "3.3.5708.0（AWS公式Windows x64配布版）",
+      "version": "3.3.5828.0（AWS公式Windows x64配布版）",
       "releaseDate": "未確認",
       "sources": [
         {
@@ -144,8 +144,8 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.40.1（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/11",
+      "version": "2.40.2（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/12",
       "sources": [
         {
           "label": "AWS公式タグ",
@@ -368,8 +368,8 @@
     {
       "no": 29,
       "name": "SQL Server 2022 CU",
-      "version": "CU27／KB5104824／ビルド 16.0.4295.3",
-      "releaseDate": "2026/09/15",
+      "version": "CU28／KB5125472／ビルド 16.0.4325.4",
+      "releaseDate": "2026/11/12",
       "sources": [
         {
           "label": "Microsoft公式CU27記事",
@@ -384,8 +384,8 @@
     {
       "no": 30,
       "name": "SQL Server 2022 CU＋GDR",
-      "version": "CU27＋GDR／KB5129300／ビルド 16.0.4315.2",
-      "releaseDate": "2026/11/10",
+      "version": "該当更新なし（最新CU28系統のCU＋GDRは公式一覧に掲載なし）",
+      "releaseDate": "未確認",
       "sources": [
         {
           "label": "Microsoft公式CU27向けセキュリティ更新",
