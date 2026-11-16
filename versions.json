@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-13T12:24:39+09:00",
+  "checkedAt": "2026-11-16T11:43:41+09:00",
   "items": [
     {
       "no": 1,
@@ -144,8 +144,8 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.40.2（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/12",
+      "version": "2.40.3（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/13",
       "sources": [
         {
           "label": "AWS公式タグ",
@@ -328,8 +328,8 @@
     {
       "no": 26,
       "name": "Windows Server 2022",
-      "version": "KB5131090（OSビルド 20348.5870）",
-      "releaseDate": "2026/11/10",
+      "version": "KB5136487（OSビルド 20348.5873、帯域外更新）",
+      "releaseDate": "2026/11/13",
       "sources": [
         {
           "label": "Microsoft公式KB",
@@ -356,8 +356,8 @@
     {
       "no": 28,
       "name": "Microsoft Edge【Stableチャネル】",
-      "version": "157.0.4341.42（Stable）",
-      "releaseDate": "2026/11/05",
+      "version": "157.0.4341.60（Stable）",
+      "releaseDate": "2026/11/13",
       "sources": [
         {
           "label": "Microsoft公式Stableリリースノート",
