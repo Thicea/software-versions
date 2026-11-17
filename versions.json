@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-16T11:43:41+09:00",
+  "checkedAt": "2026-11-17T14:04:35+09:00",
   "items": [
     {
       "no": 1,
@@ -120,8 +120,8 @@
     {
       "no": 10,
       "name": "Amazon EC2Launch v2",
-      "version": "2.5.2",
-      "releaseDate": "2026/08/05",
+      "version": "2.5.3",
+      "releaseDate": "2026/11/16",
       "sources": [
         {
           "label": "AWS公式更新履歴（v2）",
@@ -144,8 +144,8 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.40.3（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/13",
+      "version": "2.40.4（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/16",
       "sources": [
         {
           "label": "AWS公式タグ",
