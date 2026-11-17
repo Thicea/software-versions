@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T14:04:35+09:00",
+  "checkedAt": "2026-11-18T02:00:59+09:00",
   "items": [
     {
       "no": 1,
@@ -149,7 +149,7 @@
       "sources": [
         {
           "label": "AWS公式タグ",
-          "url": "https://github.com/aws/aws-cli/releases/tag/2.39.6"
+          "url": "https://github.com/aws/aws-cli/releases/tag/2.40.4"
         },
         {
           "label": "AWS公式変更履歴",
@@ -333,7 +333,7 @@
       "sources": [
         {
           "label": "Microsoft公式KB",
-          "url": "https://support.microsoft.com/ja-jp/servicing/os/windows-server/2026/10/kb5134140-windows-server-2022-update"
+          "url": "https://support.microsoft.com/ja-jp/servicing/os/windows-server/2026/11/kb5136487-windows-server-2022-update"
         },
         {
           "label": "Windows Server 2022公式更新履歴",
@@ -372,8 +372,8 @@
       "releaseDate": "2026/11/12",
       "sources": [
         {
-          "label": "Microsoft公式CU27記事",
-          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/cumulative-update/kb5104824-cu27"
+          "label": "Microsoft公式CU28記事",
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/cumulative-update/kb5125472-cu28"
         },
         {
           "label": "Microsoft公式2022ビルド一覧",
@@ -388,10 +388,6 @@
       "releaseDate": "未確認",
       "sources": [
         {
-          "label": "Microsoft公式CU27向けセキュリティ更新",
-          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/cumulative-update/kb5126934-cu27-gdr-october-2026"
-        },
-        {
           "label": "Microsoft公式2022ビルド一覧",
           "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/kb5023451-build-versions"
         }
@@ -405,7 +401,7 @@
       "sources": [
         {
           "label": "Microsoft公式GDR記事",
-          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/general-distribution-release/kb5128493-october-2026"
+          "url": "https://support.microsoft.com/ja-jp/servicing/sql/sql-server-2022/general-distribution-release/kb5132747-november-2026"
         },
         {
           "label": "Microsoft公式2022ビルド一覧",
@@ -420,11 +416,11 @@
       "releaseDate": "2026/11/02",
       "sources": [
         {
-          "label": "Microsoft公式GitHubリリース：13.6.2",
+          "label": "Microsoft公式GitHubリリース",
           "url": "https://github.com/microsoft/mssql-jdbc/releases/tag/v13.6.2"
         },
         {
-          "label": "Microsoft公式リリースノート：13.6.0",
+          "label": "Microsoft公式リリースノート",
           "url": "https://learn.microsoft.com/ja-jp/sql/connect/jdbc/release-notes-for-the-jdbc-driver"
         }
       ]
