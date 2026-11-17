@@ -8,6 +8,7 @@ from refresh import immutable
 from render import render, render_products
 from source_support import require
 from validate import validate
+from references import validate_reference_versions
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,12 +22,13 @@ def check(generated_only=False):
     if generated_only:
         require(previous == current, 'Rendering must not change versions.json or the research timestamp')
     else:
-        require(immutable(previous) == immutable(current), 'Product names, order, official URLs or labels changed')
+        require(immutable(previous) == immutable(current), 'Product names, order or other fixed fields changed')
+        validate_reference_versions(current)
     validate(current)
     require((ROOT / 'index.html').read_text() == render(current), 'Published HTML does not match the approved template/data')
     require((ROOT / 'products.json').read_text() == render_products(current), 'Product list does not match versions.json')
     print('Scope verified: ' + ('only generated HTML/product list changed' if generated_only
-                                else 'only version, releaseDate and checkedAt changed'))
+                                else 'only version, releaseDate, sources and checkedAt changed'))
 
 
 if __name__ == '__main__':

@@ -26,6 +26,8 @@ class Client:
         self.metadata = metadata or {}
 
     def doc(self, url):
+        if isinstance(self.html, dict) and url not in self.html:
+            raise SourceError('No translated test page: ' + url)
         return Document(self.html[url] if isinstance(self.html, dict) else self.html)
 
     def json(self, url):
@@ -131,8 +133,8 @@ class UpdateBoundaryTests(unittest.TestCase):
         with self.assertRaises(SourceError):
             prepare_update(self.previous, self.results, '2026-11-09T08:30:05+09:00')
 
-    def test_source_or_product_name_updates_are_rejected(self):
-        for key in ('sources', 'name'):
+    def test_product_name_or_unapproved_field_updates_are_rejected(self):
+        for key in ('name', 'unexpected'):
             changed = copy.deepcopy(self.results)
             changed[1][key] = 'not allowed'
             with self.assertRaises(SourceError):
@@ -153,13 +155,13 @@ class UpdateBoundaryTests(unittest.TestCase):
             self.assertEqual((directory/'index.html').read_text(), 'existing published page')
             self.assertTrue(report.exists())
 
-    def test_cron_sunday_to_thursday_maps_to_jst_weekdays(self):
+    def test_early_start_sunday_to_thursday_maps_to_jst_weekdays(self):
         workflow = (ROOT/'.github/workflows/refresh-versions.yml').read_text()
-        self.assertIn("cron: '15 23 * * 0-4'", workflow)
-        sunday = datetime(2026, 11, 8, 23, 15, tzinfo=timezone.utc)
+        self.assertIn("cron: '35 17 * * 0-4'", workflow)
+        sunday = datetime(2026, 11, 8, 17, 35, tzinfo=timezone.utc)
         local = [(sunday+timedelta(days=i)).astimezone(ZoneInfo('Asia/Tokyo')) for i in range(5)]
         self.assertEqual([d.weekday() for d in local], [0, 1, 2, 3, 4])
-        self.assertTrue(all((d.hour, d.minute) == (8, 15) for d in local))
+        self.assertTrue(all((d.hour, d.minute) == (2, 35) for d in local))
 
 
 class PublicationTests(unittest.TestCase):

@@ -4,6 +4,7 @@ from datetime import datetime
 from urllib.parse import urljoin
 
 from source_support import DATE_PATTERN, SourceError, pe_version, published, release_date, require, version_key
+from references import article_reference, source
 
 VC = 'https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist'
 MSOLAP = 'https://learn.microsoft.com/en-us/analysis-services/client-libraries?view=asallproducts-allversions'
@@ -35,8 +36,11 @@ FRAMEWORK_BASE = 'https://support.microsoft.com/en-us/servicing/dotnetframework/
 FRAMEWORK = FRAMEWORK_BASE + '2021/09/history-of-cumulative-updates-for-net-framework-for-windows-server-2022'
 
 
-def result(version, date='未確認'):
-    return {'version': version, 'releaseDate': date}
+def result(version, date='未確認', sources=None):
+    value = {'version': version, 'releaseDate': date}
+    if sources is not None:
+        value['sources'] = sources
+    return value
 
 
 def vc(client, today):
@@ -148,7 +152,11 @@ def pv(client, today):
 def cfn(client, today):
     names = ('英語', '中国向け英語', '日本語')
     values = [aws_table(client.doc(url), today, cfn=True) for url in (CFN, CFN_CN, CFN_JA)]
-    return {14: cfn_result(values, names)}
+    value = cfn_result(values, names)
+    refs = [source(url, f'{name}：{entry["version"]}') for url, name, entry in
+            zip((CFN, CFN_CN, CFN_JA), ('グローバル英語', '中国向け英語', '日本語'), values)]
+    value['sources'] = [refs[2]] if values[0] == values[1] == values[2] else refs
+    return {14: value}
 
 
 def cfn_result(values, names=('英語', '中国向け英語', '日本語')):
@@ -161,7 +169,7 @@ def cfn_result(values, names=('英語', '中国向け英語', '日本語')):
     return result(f'最新版未確定（公式掲載差異：{details}）')
 
 
-def github_release(client, repo, today):
+def github_release(client, repo, today, source_label=None):
     doc = client.doc(f'https://github.com/{repo}/releases')
     candidates = []
     for section in (n for n in doc.flat if n.tag == 'section' and n.attrs.get('id', '').startswith('release-')):
@@ -180,7 +188,8 @@ def github_release(client, repo, today):
         times = section.find_all('relative-time')
         require(times, 'GitHub release publication time missing')
         date = datetime.fromisoformat(times[0].attrs['datetime'].replace('Z', '+00:00')).date()
-        candidates.append((version_key(version), result(version, published(date, today))))
+        refs = [source(f'https://github.com/{repo}/releases/tag/{tags[0]}', source_label)] if source_label else None
+        candidates.append((version_key(version), result(version, published(date, today), refs)))
     require(candidates, f'No stable GitHub release found for {repo}')
     return max(candidates, key=lambda x: x[0])[1]
 
@@ -197,7 +206,7 @@ def ssm(client, today):
     return {11: result(version + '（AWS公式Windows x64配布版）')}
 
 
-def tera(client, today): return {17: github_release(client, 'TeraTermProject/teraterm', today)}
+def tera(client, today): return {17: github_release(client, 'TeraTermProject/teraterm', today, '公式GitHubリリース')}
 
 
 def cli(client, today):
@@ -212,7 +221,10 @@ def cli(client, today):
     date = datetime.fromisoformat(times[0].attrs['datetime'].replace('Z', '+00:00')).date()
     install = client.doc(CLI_INSTALL)
     require('https://awscli.amazonaws.com/AWSCLIV2.msi' in install.text() and '64-bit' in install.text(), 'Windows 64-bit MSI offering missing')
-    return {12: result(version + '（Windows用64ビットMSIの提供案内も確認）', published(date, today))}
+    refs = [source(f'https://github.com/aws/aws-cli/releases/tag/{version}', 'AWS公式タグ'),
+            source('https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst', 'AWS公式変更履歴'),
+            source(CLI_INSTALL.replace('/cli/', '/ja_jp/cli/', 1), 'AWS公式Windows配布案内')]
+    return {12: result(version + '（Windows用64ビットMSIの提供案内も確認）', published(date, today), refs)}
 
 
 def csl(client, today):
@@ -285,10 +297,14 @@ def windows(client, today):
                 candidates.append((date, int(build.group(1).split('.')[1]), item, kb.group(), build.group(1)))
     require(candidates, 'No released Server 2022 cumulative update')
     date, _, item, kb, build = max(candidates, key=lambda x: x[:2])
-    article = client.doc(urljoin(toc_url, item['href']))
+    article_url = urljoin(toc_url, item['href'])
+    article = client.doc(article_url)
     require(any(kb in n.text() and build in n.text() for n in article.root.find_all('h1')), 'OS KB/build mismatch in official article')
     suffix = '、帯域外更新' if 'out-of-band' in item['toc_title'].lower() else ''
-    return {26: result(f'{kb}（OSビルド {build}{suffix}）', published(date, today))}
+    release = published(date, today)
+    refs = [article_reference(client, article_url, 'Microsoft公式KB', kb, build, release),
+            source(WINDOWS.replace('/en-us/', '/ja-jp/'), 'Windows Server 2022公式更新履歴')]
+    return {26: result(f'{kb}（OSビルド {build}{suffix}）', release, refs)}
 
 
 def office(client, today):
@@ -363,24 +379,28 @@ def sql(client, today):
     require('SQL Server 2022' in doc.text(), 'SQL build list product mismatch')
     cu, cu_gdr, gdr = select_sql(sql_records(doc, today))
     output = {}
+    history_ref = source(SQL.replace('/en-us/', '/ja-jp/'), 'Microsoft公式2022ビルド一覧')
     for no, record in [(29, cu), (30, cu_gdr), (31, gdr)]:
         if record is None:
-            output[no] = result(f'該当更新なし（最新{cu[0]}系統のCU＋GDRは公式一覧に掲載なし）')
+            output[no] = result(f'該当更新なし（最新{cu[0]}系統のCU＋GDRは公式一覧に掲載なし）', sources=[history_ref])
             continue
         name, kb, version, date = record
-        article = client.doc('https://support.microsoft.com/en-us/help/' + kb[2:])
+        article_url = 'https://support.microsoft.com/en-us/help/' + kb[2:]
+        article = client.doc(article_url)
         require(any(kb in n.text() for n in article.root.find_all('h1')), f'SQL {kb} official article mismatch')
         text = article.text()
         release = re.search(r'Release date:\s*(' + DATE_PATTERN + ')', text, re.I)
         require(release and published(release_date(release.group(1)), today) == date, 'SQL index/article release date mismatch')
         require(re.search(r'Version:\s*' + re.escape(version) + r'\b', text, re.I), 'SQL index/article product build mismatch')
         label = name.replace(' + ', '＋')
-        output[no] = result(f'{label}／{kb}／ビルド {version}', date)
+        article_label = {29: f'Microsoft公式{cu[0]}記事', 30: f'Microsoft公式{cu[0]}向けセキュリティ更新', 31: 'Microsoft公式GDR記事'}[no]
+        refs = [article_reference(client, article_url, article_label, kb, version, date), history_ref]
+        output[no] = result(f'{label}／{kb}／ビルド {version}', date, refs)
     return output
 
 
 def jdbc(client, today):
-    value = github_release(client, 'microsoft/mssql-jdbc', today)
+    value = github_release(client, 'microsoft/mssql-jdbc', today, 'Microsoft公式GitHubリリース')
     doc = client.doc(JDBC)
     versions = []
     for title, text, _ in doc.headings(r'^\d+\.\d+$'):
@@ -392,7 +412,8 @@ def jdbc(client, today):
     _, notes_version, notes_date = max(versions, key=lambda r: r[0])
     require(version_key(value['version']) >= version_key(notes_version), 'JDBC release-note/GitHub precedence needs manual review')
     suffix = f'（正式版。公式リリースノートは{notes_version}／{notes_date}の掲載）' if notes_version != value['version'] else '（正式版）'
-    return {32: result(value['version'] + suffix, value['releaseDate'])}
+    refs = value['sources'] + [source(JDBC.replace('/en-us/', '/ja-jp/'), 'Microsoft公式リリースノート')]
+    return {32: result(value['version'] + suffix, value['releaseDate'], refs)}
 
 
 def framework(client, today):
@@ -431,7 +452,9 @@ def framework(client, today):
     require(number in title and '4.8.1' not in title and 'Windows Server 2022' in title, 'Framework individual KB product mismatch')
     match = re.search(r'Release Date:\s*(' + DATE_PATTERN + ')', article.text(), re.I)
     require(match, 'Framework KB formal release date missing')
-    return {33: result(f'KB{number}（Windows Server 2022向け.NET Framework 3.5／4.8）', published(release_date(match.group(1)), today))}
+    date = published(release_date(match.group(1)), today)
+    refs = [article_reference(client, url, 'Microsoft公式3.5／4.8向けKB', 'KB' + number, date=date)]
+    return {33: result(f'KB{number}（Windows Server 2022向け.NET Framework 3.5／4.8）', date, refs)}
 
 
 COLLECTORS = [vc, msolap, odbc, oledb, ssms, vsta, ec2, ssm, cli, pv, cfn,

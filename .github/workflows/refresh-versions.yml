@@ -2,7 +2,11 @@ name: Refresh software versions
 
 on:
   schedule:
-    # 23:15 UTC Sunday–Thursday = 08:15 JST Monday–Friday (including holidays).
+    # Start early enough to absorb the multi-hour schedule delays observed in this repo.
+    # 17:35 UTC Sunday–Thursday = 02:35 JST Monday–Friday. Data is NOT fetched yet.
+    - cron: '35 17 * * 0-4'
+    # Recovery/startup attempts at 07:05 and 08:15 JST; collection waits for 08:30.
+    - cron: '5 22 * * 0-4'
     - cron: '15 23 * * 0-4'
     # Recovery triggers: only investigate if this morning is still incomplete.
     - cron: '45 23 * * 0-4'
@@ -17,14 +21,33 @@ permissions:
   contents: write
   pages: write
 
-concurrency:
-  group: refresh-software-versions
-  cancel-in-progress: false
-
 jobs:
-  refresh-and-publish:
+  prepare:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 360
+    concurrency:
+      group: prepare-software-morning-${{ github.event_name == 'schedule' && 'scheduled' || github.run_id }}
+      cancel-in-progress: false
+    outputs:
+      eligible: ${{ steps.wait.outputs.eligible }}
+    steps:
+      - name: Check out scheduling code
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+      - name: Wait until today's 08:30 JST research window
+        id: wait
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/check_refresh_due.py --event '${{ github.event_name }}' --wait research >> "$GITHUB_OUTPUT"
+  refresh-and-publish:
+    needs: prepare
+    if: needs.prepare.outputs.eligible == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    concurrency:
+      group: refresh-software-versions
+      cancel-in-progress: false
     steps:
       - name: Check out main
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -48,6 +71,15 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python3 scripts/refresh.py --report "$RUNNER_TEMP/software-research.json"
+      - name: Wait until 08:38 JST before pushing the morning publication
+        if: steps.research.outputs.due == 'true'
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/check_refresh_due.py --event '${{ github.event_name }}' --wait publish
+      - name: Require today's research before publication
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/check_refresh_due.py --event '${{ github.event_name }}' --verify-today
       - name: Commit only approved data fields and generated HTML
         if: steps.research.outputs.due == 'true'
         env:
@@ -59,7 +91,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- versions.json index.html
           if ! git diff --cached --quiet; then
-            git commit -m 'Update software versions and JST research timestamp'
+            git commit -m 'Update software versions, references and JST research timestamp'
             git push origin HEAD:main
           fi
       - name: Build Pages and verify the public HTML

@@ -2,15 +2,16 @@
 import argparse
 import json
 import sys
-from datetime import datetime, time
+from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from validate import validate
+from publication_schedule import RESEARCH_TIME, wait_for_stage, verify_today
 
 ROOT = Path(__file__).resolve().parents[1]
 JST = ZoneInfo('Asia/Tokyo')
-MORNING_START = time(8, 15)
+MORNING_START = RESEARCH_TIME
 
 
 def research_due(data, now):
@@ -31,11 +32,22 @@ def research_due(data, now):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--event', choices=['schedule', 'push', 'workflow_dispatch'], required=True)
+    parser.add_argument('--wait', choices=['research', 'publish'])
+    parser.add_argument('--verify-today', action='store_true')
     args = parser.parse_args()
+    if args.wait:
+        eligible = wait_for_stage(args.wait, args.event)
+        if args.wait == 'research':
+            print('eligible=' + str(eligible).lower())
+        return
     data = json.loads((ROOT / 'versions.json').read_text())
     validate(data)
-    # Manual dispatch explicitly requests a fresh investigation, even if already done.
-    due = args.event == 'workflow_dispatch' or research_due(data, datetime.now(JST))
+    if args.verify_today:
+        verify_today(data, datetime.now(JST), scheduled=args.event == 'schedule')
+        print('Verified: research is from today in Japan')
+        return
+    # Manual/configuration verification runs investigate immediately, including at night.
+    due = args.event != 'schedule' or research_due(data, datetime.now(JST))
     print('due=' + str(due).lower())
     print('Fresh research required' if due else 'Research already completed for this morning, or outside its weekday window', file=sys.stderr)
 

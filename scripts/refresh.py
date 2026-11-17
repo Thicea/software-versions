@@ -1,4 +1,4 @@
-"""Refresh only versions, formal release dates, and the fixed JST research time."""
+"""Refresh versions, release dates, matching reference pages and the JST research time."""
 import argparse
 import copy
 import json
@@ -11,6 +11,7 @@ from render import render
 from research_sources import COLLECTORS
 from source_support import Client, require
 from validate import validate
+from references import validate_reference_versions
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,6 +22,7 @@ def immutable(data):
     for item in frozen['items']:
         item.pop('version', None)
         item.pop('releaseDate', None)
+        item.pop('sources', None)
     return frozen
 
 
@@ -29,11 +31,12 @@ def prepare_update(previous, results, checked_at):
     updated = copy.deepcopy(previous)
     for item in updated['items']:
         changes = results[item['no']]
-        require(set(changes) == {'version', 'releaseDate'}, 'Only version/releaseDate may be updated')
+        require({'version', 'releaseDate'} <= set(changes) <= {'version', 'releaseDate', 'sources'}, 'Only version/releaseDate/sources may be updated')
         item.update(changes)
     updated['checkedAt'] = checked_at
-    require(immutable(updated) == immutable(previous), 'Product names, order, official URLs or labels changed')
+    require(immutable(updated) == immutable(previous), 'Product names, order or other fixed fields changed')
     validate(updated)
+    validate_reference_versions(updated)
     return updated
 
 

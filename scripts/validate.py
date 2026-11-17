@@ -33,6 +33,10 @@ def validate(data):
             url = urlsplit(source['url'])
             if not (url.scheme == 'https' and url.hostname and not url.username and not url.password):
                 raise ValueError('HTTPSの公式URLを指定してください')
+            if re.search(r'\.(?:exe|msi|msp|msix|zip|cab|7z|gz|json)$', url.path, re.I) or url.hostname in ('raw.githubusercontent.com', 's3.amazonaws.com'):
+                raise ValueError('公式URLには配布ファイルではなく参照ページを指定してください')
+            if item['no'] == 11 and url.hostname in ('github.com', 'raw.githubusercontent.com'):
+                raise ValueError('SSM Agentの公式URLにGitHubは使用できません')
             if not source['label'].strip():
                 raise ValueError('リンク名が必要です')
 
