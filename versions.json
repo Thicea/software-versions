@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-18T08:56:30+09:00",
+  "checkedAt": "2026-11-19T08:31:01+09:00",
   "items": [
     {
       "no": 1,
@@ -144,12 +144,12 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.41.0（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/17",
+      "version": "2.41.1（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/18",
       "sources": [
         {
           "label": "AWS公式タグ",
-          "url": "https://github.com/aws/aws-cli/releases/tag/2.41.0"
+          "url": "https://github.com/aws/aws-cli/releases/tag/2.41.1"
         },
         {
           "label": "AWS公式変更履歴",
@@ -344,8 +344,8 @@
     {
       "no": 27,
       "name": "Office LTSC 2024",
-      "version": "バージョン 2610（ビルド 20527.20196）",
-      "releaseDate": "2026/11/10",
+      "version": "バージョン 2611（ビルド 20625.20108）",
+      "releaseDate": "2026/11/17",
       "sources": [
         {
           "label": "Microsoft公式Office LTSC 2024更新履歴",
