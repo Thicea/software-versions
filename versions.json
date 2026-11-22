@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-20T08:45:11+09:00",
+  "checkedAt": "2026-11-23T08:30:27+09:00",
   "items": [
     {
       "no": 1,
@@ -144,12 +144,12 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.41.2（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/19",
+      "version": "2.42.1（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/21",
       "sources": [
         {
           "label": "AWS公式タグ",
-          "url": "https://github.com/aws/aws-cli/releases/tag/2.41.2"
+          "url": "https://github.com/aws/aws-cli/releases/tag/2.42.1"
         },
         {
           "label": "AWS公式変更履歴",
