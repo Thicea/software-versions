@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-25T10:32:28+09:00",
+  "checkedAt": "2026-11-26T10:07:13+09:00",
   "items": [
     {
       "no": 1,
@@ -144,12 +144,12 @@
     {
       "no": 12,
       "name": "AWS Command Line Interface v2",
-      "version": "2.42.3（Windows用64ビットMSIの提供案内も確認）",
-      "releaseDate": "2026/11/24",
+      "version": "2.42.4（Windows用64ビットMSIの提供案内も確認）",
+      "releaseDate": "2026/11/25",
       "sources": [
         {
           "label": "AWS公式タグ",
-          "url": "https://github.com/aws/aws-cli/releases/tag/2.42.3"
+          "url": "https://github.com/aws/aws-cli/releases/tag/2.42.4"
         },
         {
           "label": "AWS公式変更履歴",
@@ -356,8 +356,8 @@
     {
       "no": 28,
       "name": "Microsoft Edge【Stableチャネル】",
-      "version": "158.0.4370.33（Stable）",
-      "releaseDate": "2026/11/19",
+      "version": "158.0.4370.45（Stable）",
+      "releaseDate": "2026/11/25",
       "sources": [
         {
           "label": "Microsoft公式Stableリリースノート",
